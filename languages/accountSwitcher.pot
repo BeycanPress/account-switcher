@@ -1,0 +1,160 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Account Switcher\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-11 09:56+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.2; wp-6.1.1\n"
+"X-Domain: accountSwitcher"
+
+#. Name of the plugin
+#: app/Settings.php:17
+msgid "Account Switcher"
+msgstr ""
+
+#: app/Settings.php:36
+msgid "Adds switch accounts button to WooCommerce my account page"
+msgstr ""
+
+#: app/Settings.php:42
+msgid ""
+"After logging in, which address do you want to be forwarded to? If you type "
+"\"same-page\" it will redirect to the current page."
+msgstr ""
+
+#: app/Settings.php:88 app/Settings.php:93
+msgid "Backup"
+msgstr ""
+
+#. Author of the plugin
+msgid "BeycanPress"
+msgstr ""
+
+#: app/Settings.php:26
+msgid "Data deletion status"
+msgstr ""
+
+#: app/Lang.php:16
+msgid "Do you want to save your account for future logins?"
+msgstr ""
+
+#: app/Lang.php:15
+msgid "Don't save"
+msgstr ""
+
+#: app/Settings.php:21
+msgid "General options"
+msgstr ""
+
+#. URI of the plugin
+#. Author URI of the plugin
+msgid "https://beycanpress.com"
+msgstr ""
+
+#: app/Loader.php:25
+msgid ""
+"In order to use the \"Account Switcher\" Plugin, please enter your license "
+"(purchase) code in the license field in the settings section."
+msgstr ""
+
+#: app/Api.php:43 app/Api.php:89 app/Api.php:106 app/Api.php:128
+msgid "Invalid request"
+msgstr ""
+
+#: app/Settings.php:58
+msgid "License"
+msgstr ""
+
+#: app/Settings.php:64
+msgid "License (Purchase code)"
+msgstr ""
+
+#: app/Settings.php:71
+msgid "License cannot be empty."
+msgstr ""
+
+#: app/Settings.php:73
+msgid "License must consist of 36 characters."
+msgstr ""
+
+#: app/Lang.php:11
+msgid "Logging in..."
+msgstr ""
+
+#: app/Lang.php:13
+msgid "Login"
+msgstr ""
+
+#: app/Settings.php:41
+msgid "Login redirect url"
+msgstr ""
+
+#: views/modal.php:48
+msgid "Login to an existing account"
+msgstr ""
+
+#: app/Api.php:98
+msgid "No account found for this user id!"
+msgstr ""
+
+#: app/Api.php:60
+msgid "No account found for this username!"
+msgstr ""
+
+#: app/Api.php:52
+msgid "Please fill out the required fields!"
+msgstr ""
+
+#: app/Lang.php:12
+msgid "Please wait..."
+msgstr ""
+
+#: app/Lang.php:14
+msgid "Save"
+msgstr ""
+
+#: app/Lang.php:10
+msgid "Something went wrong"
+msgstr ""
+
+#: app/Hooks.php:130 views/modal.php:24
+msgid "Switch accounts"
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"Thanks to this plugin, more than one account can be registered on a "
+"wordpress site and the user can switch between accounts at any time."
+msgstr ""
+
+#: app/Settings.php:29
+msgid ""
+"This setting is passive come by default. You enable this setting. All data "
+"created by the plug-in will be deleted while removing the plug-in."
+msgstr ""
+
+#: app/Settings.php:34
+msgid "WooCommerce My Account Page Buton"
+msgstr ""
+
+#: app/Api.php:102
+msgid "You are already logged in with the information you entered!"
+msgstr ""
+
+#: app/Api.php:56
+msgid "You entered an invalid username!"
+msgstr ""
+
+#: app/Lang.php:17
+msgid ""
+"You have successfully logged in, your session account is being change..."
+msgstr ""
