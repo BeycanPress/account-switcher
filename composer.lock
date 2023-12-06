@@ -49,16 +49,16 @@
         },
         {
             "name": "beycanpress/csf",
-            "version": "2.3.2",
+            "version": "2.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/BeycanPress/csf.git",
-                "reference": "acd7bd2feae1861f56c7669dadec629b22fae582"
+                "reference": "f8db82b6339e69cbb765496d623789e7f472977e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/BeycanPress/csf/zipball/acd7bd2feae1861f56c7669dadec629b22fae582",
-                "reference": "acd7bd2feae1861f56c7669dadec629b22fae582",
+                "url": "https://api.github.com/repos/BeycanPress/csf/zipball/f8db82b6339e69cbb765496d623789e7f472977e",
+                "reference": "f8db82b6339e69cbb765496d623789e7f472977e",
                 "shasum": ""
             },
             "type": "library",
@@ -70,9 +70,9 @@
             "homepage": "https://github.com/BeycanPress/csf",
             "support": {
                 "issues": "https://github.com/BeycanPress/csf/issues",
-                "source": "https://github.com/BeycanPress/csf/tree/2.3.2"
+                "source": "https://github.com/BeycanPress/csf/tree/2.3.4"
             },
-            "time": "2023-10-11T17:19:44+00:00"
+            "time": "2023-12-06T04:35:59+00:00"
         }
     ],
     "packages-dev": [],
