@@ -108,9 +108,9 @@ class Hooks
      */
     public function enqueueScripts() : void
     {
-        $this->addStyle('css/main.css');
-        $this->addScript('js/sweetalert2.js');
-        $this->mainJsKey = $this->addScript('js/main.js', ['jquery']);
+        $this->addStyle('main.css');
+        $this->addScript('sweetalert2.js');
+        $this->mainJsKey = $this->addScript('main.js', ['jquery']);
         wp_localize_script($this->mainJsKey, 'AS', [
             'lang' => Lang::get(),
             'apiUrl' => $this->api->getUrl(),

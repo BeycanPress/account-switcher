@@ -9,15 +9,15 @@ class ComposerStaticInit5b34908d489f1601e2e1cb188a509221
     public static $prefixLengthsPsr4 = array (
         'B' => 
         array (
-            'Beycan\\' => 7,
+            'BeycanPress\\Http\\' => 17,
             'BeycanPress\\AccountSwitcher\\' => 28,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Beycan\\' => 
+        'BeycanPress\\Http\\' => 
         array (
-            0 => __DIR__ . '/..' . '/beycan/response/src',
+            0 => __DIR__ . '/..' . '/beycanpress/http/src',
         ),
         'BeycanPress\\AccountSwitcher\\' => 
         array (

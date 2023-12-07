@@ -6,6 +6,6 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Beycan\\' => array($vendorDir . '/beycan/response/src'),
+    'BeycanPress\\Http\\' => array($vendorDir . '/beycanpress/http/src'),
     'BeycanPress\\AccountSwitcher\\' => array($baseDir . '/app'),
 );

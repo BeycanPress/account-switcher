@@ -2,7 +2,7 @@
 
 namespace BeycanPress\AccountSwitcher;
 
-use \Beycan\Response;
+use \BeycanPress\Http\Response;
 
 class Api extends PluginHero\Api
 {

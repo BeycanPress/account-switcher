@@ -1,12 +1,12 @@
 <?php
 
-namespace Beycan;
+namespace BeycanPress\Http;
 
 /**
  * A helper class to return meaningful and regular responses.
- * @link https://github.com/BeycanDeveloper/response
- * @author BeycanDeveloper
- * @version 1.0.0
+ * @link https://github.com/BeycanPress/response
+ * @author BeycanPress
+ * @version 0.1.0
  */
 final class Response
 {
@@ -38,8 +38,9 @@ final class Response
      * Method that prints the output as json to the screen
      * @param array $data
      * @param int $statusCode
+     * @return void
      */
-    private static function json(array $data, int $statusCode)
+    private static function json(array $data, int $statusCode) : void
     {
         http_response_code($statusCode);
         echo json_encode($data);
@@ -48,14 +49,16 @@ final class Response
 
     /**
      * Helper method to return some error types in ready form.
-     * @param string $message
-     * @param string $errorCode
+     * @param string|null $message
+     * @param string|null $errorCode
+     * @param mixed $data
      * @param int $responseCode
+     * @return void
      */
-    private static function readyErrorResponse($message, $errorCode, $data, int $responseCode)
+    private static function readyErrorResponse(?string $message, ?string $errorCode, $data, int $responseCode) : void
     {
         $readyMessageText = isset(self::$statusTexts[$responseCode]) ? self::$statusTexts[$responseCode] : null;
-        
+
         self::json([
             'success' => false,
             'errorCode' => $errorCode ? $errorCode : "ER".$responseCode,
@@ -65,10 +68,11 @@ final class Response
     }
 
     /**
-     * @param string $message
+     * @param string|null $message
      * @param mixed $data
+     * @return void
      */
-    public static function success($message = null, $data = null)
+    public static function success(?string $message = null, $data = null) : void
     {
         self::json([
             'success' => true,
@@ -79,77 +83,79 @@ final class Response
     }
 
     /**
-     * @param string $message
-     * @param string $errorCode
+     * @param string|null $message
+     * @param string|null $errorCode
      * @param mixed $data
      * @param int $responseCode
+     * @return void
      */
-    public static function error($message = null, $data = null, $errorCode = null, int $responseCode = 200)
+    public static function error(?string $message = null, ?string $errorCode = null, $data = null, int $responseCode = 200) : void
     {
-        self::json([
-            'success' => false,
-            'errorCode' => $errorCode ? $errorCode : "ER".$responseCode,
-            'message' => $message,
-            'data' => $data
-        ], $responseCode);
+        self::readyErrorResponse($message, $errorCode, $data, $responseCode);
     }
 
     /**
-     * @param string $message
-     * @param string $errorCode
+     * @param string|null $message
+     * @param string|null $errorCode
      * @param mixed $data
+     * @return void
      */
-    public static function badRequest($message = null, $errorCode = null, $data = null)
+    public static function badRequest(?string $message = null, ?string $errorCode = null, $data = null) : void
     {
         self::readyErrorResponse($message, $errorCode, $data, self::HTTP_BAD_REQUEST);
     }
 
     /**
-     * @param string $message
-     * @param string $errorCode
+     * @param string|null $message
+     * @param string|null $errorCode
      * @param mixed $data
+     * @return void
      */
-    public static function unAuthorized($message = null, $errorCode = null, $data = null)
+    public static function unAuthorized(?string $message = null, ?string $errorCode = null, $data = null) : void
     {
         self::readyErrorResponse($message, $errorCode, $data, self::HTTP_UNAUTHORIZED);
     }
 
     /**
-     * @param string $message
-     * @param string $errorCode
+     * @param string|null $message
+     * @param string|null $errorCode
      * @param mixed $data
+     * @return void
      */
-    public static function forbidden($message = null, $errorCode = null, $data = null)
+    public static function forbidden(?string $message = null, ?string $errorCode = null, $data = null) : void
     {
         self::readyErrorResponse($message, $errorCode, $data, self::HTTP_FORBIDDEN);
     }
 
     /**
-     * @param string $message
-     * @param string $errorCode
+     * @param string|null $message
+     * @param string|null $errorCode
      * @param mixed $data
+     * @return void
      */
-    public static function notFound($message = null, $errorCode = null, $data = null)
+    public static function notFound(?string $message = null, ?string $errorCode = null, $data = null) : void
     {
         self::readyErrorResponse($message, $errorCode, $data, self::HTTP_NOT_FOUND);
     }
 
     /**
-     * @param string $message
-     * @param string $errorCode
+     * @param string|null $message
+     * @param string|null $errorCode
      * @param mixed $data
+     * @return void
      */
-    public static function notAcceptable($message = null, $errorCode = null, $data = null)
+    public static function notAcceptable(?string $message = null, ?string $errorCode = null, $data = null) : void
     {
         self::readyErrorResponse($message, $errorCode, $data, self::HTTP_NOT_ACCEPTABLE);
     }
 
     /**
-     * @param string $message
-     * @param string $errorCode
+     * @param string|null $message
+     * @param string|null $errorCode
      * @param mixed $data
+     * @return void
      */
-    public static function serverInternal($message = null, $errorCode = null, $data = null)
+    public static function serverInternal(?string $message = null, ?string $errorCode = null, $data = null) : void
     {
         self::readyErrorResponse($message, $errorCode, $data, self::HTTP_INTERNAL_SERVER_ERROR);
     }
