@@ -2,7 +2,7 @@
 Contributors: BeycanPress
 Tags: multiple accounts, wpml, account switcher
 Requires at least: 5.0
-Tested up to: 6.4
+Tested up to: 6.4.2
 Requires PHP: 7.4
 Stable Tag: 1.0.0
 Version: 1.0.0

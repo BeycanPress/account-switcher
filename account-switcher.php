@@ -13,7 +13,7 @@
  * License URI:  https://www.gnu.org/licenses/gpl-3.0.tr.html
  * Domain Path:  /languages
  * Requires at least: 5.0
- * Tested up to: 6.4
+ * Tested up to: 6.4.2
  * Requires PHP: 7.4
 */
 
