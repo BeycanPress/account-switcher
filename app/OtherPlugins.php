@@ -7,7 +7,7 @@ class OtherPlugins
     /**
      * @var string
      */
-    private $apiUrl = 'https://beycanpress.com/wp-json/bp-api/';
+    private $apiUrl = 'https://services.beycanpress.com/wp-json/general-data/';
     
     /**
      * Class construct
@@ -35,9 +35,9 @@ class OtherPlugins
      */
     public function page() : void
     {
-        $res = wp_remote_retrieve_body(wp_remote_get($this->apiUrl . 'general-products'));
+        $res = wp_remote_retrieve_body(wp_remote_get($this->apiUrl . 'get-plugins'));
         $res = json_decode(str_replace(['<p>', '</p>'], '', $res));
-        $plugins = $res->data->products;
+        $plugins = $res->data->plugins;
         
         ?>
         <div class="wrap">
@@ -54,7 +54,7 @@ class OtherPlugins
                                 <?php if (isset($plugins)) :
                                     foreach ($plugins as $product) : ?>
                                         <li>
-                                            <a href="<?php echo esc_url($product->permalink) ?>" target="_blank">
+                                            <a href="<?php echo $product->landingPage ? esc_url($product->landingPage) : esc_url($product->image); ?>" target="_blank">
                                                 <img src="<?php echo esc_url($product->image) ?>" alt="<?php echo esc_attr($product->title) ?>">
                                                 <span><?php echo esc_html($product->title) ?></span>
                                             </a>
