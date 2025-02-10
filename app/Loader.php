@@ -1,30 +1,38 @@
 <?php
 
+declare(strict_types=1);
+
 namespace BeycanPress\AccountSwitcher;
 
 use BeycanPress\AccountSwitcher\PluginHero\Plugin;
 
 class Loader extends Plugin
 {
-    public function __construct($pluginFile)
+    /**
+     * Loader constructor.
+     * @param string $pluginFile
+     */
+    public function __construct(string $pluginFile)
     {
         parent::__construct([
             'pluginFile' => $pluginFile,
-            'pluginKey' => 'accountSwitcher',
-            'textDomain' => 'accountSwitcher',
+            'pluginKey' => 'account-switcher',
+            'textDomain' => 'account-switcher',
             'settingKey' => 'accountSwitcherSettings',
             'pluginVersion' => '1.0.0'
         ]);
 
-        add_action('init', function() {
+        add_action('init', function (): void {
             new Hooks();
         });
     }
 
-    public function adminProcess()
+    /**
+     * @return void
+     */
+    public function adminProcess(): void
     {
-        new OtherPlugins($this->pluginFile);
-        add_action('init', function(){
+        add_action('init', function (): void {
             new Settings();
         }, 9);
     }

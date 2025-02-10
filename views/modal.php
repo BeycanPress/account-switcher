@@ -1,4 +1,9 @@
-<div class="as-modal" data-redirect="<?php echo esc_attr($this->setting('loginRedirect')); ?>">
+<?php
+// phpcs:disable PluginCheck.CodeAnalysis.ImageFunctions.NonEnqueuedImage
+use BeycanPress\AccountSwitcher\Settings;
+?>
+
+<div class="as-modal" data-redirect="<?php echo esc_attr(Settings::get('loginRedirect')); ?>">
     <div class="as-content">
         <div class="as-close">
             <svg aria-label="Close" class="_ab6-" color="#262626" fill="#262626" height="18" role="img" viewBox="0 0 24 24" width="18"><polyline fill="none" points="20.643 3.357 12 12 3.353 20.647" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></polyline><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" x1="20.649" x2="3.354" y1="20.649" y2="3.354"></line></svg>
@@ -8,17 +13,17 @@
                 <svg aria-label="Close" class="_ab6-" color="#262626" fill="#262626" height="18" role="img" viewBox="0 0 24 24" width="18"><polyline fill="none" points="20.643 3.357 12 12 3.353 20.647" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></polyline><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" x1="20.649" x2="3.354" y1="20.649" y2="3.354"></line></svg>
             </div>
             <form method="post" id="as-login-form">
-                <input type="text" id="username" name="username" placeholder="<?php esc_attr_e('Username', 'accountSiwtcher'); ?>">
-                <input type="password" id="password" name="password" placeholder="<?php esc_attr_e('Password', 'accountSiwtcher'); ?>">
+                <input type="text" id="username" name="username" placeholder="<?php esc_attr_e('Username', 'account-switcher'); ?>">
+                <input type="password" id="password" name="password" placeholder="<?php esc_attr_e('Password', 'account-switcher'); ?>">
                 <label for="rememberMe">
-                    <input type="checkbox" id="rememberMe" name="rememberMe"><?php esc_html_e('Remember me', 'accountSiwtcher'); ?>
+                    <input type="checkbox" id="rememberMe" name="rememberMe"><?php esc_html_e('Remember me', 'account-switcher'); ?>
                 </label>
-                <input type="submit" value="<?php esc_attr_e('Login', 'accountSiwtcher'); ?>">
+                <input type="submit" value="<?php esc_attr_e('Login', 'account-switcher'); ?>">
             </form>
         </div>
         <div class="as-users <?php echo !empty($users) ? 'active' : '' ?>">
             <div class="as-title">
-                <?php esc_html_e('Switch accounts', 'accountSwitcher'); ?>
+                <?php esc_html_e('Switch accounts', 'account-switcher'); ?>
             </div>
             <div class="as-user-list">
                 <ul>
@@ -42,7 +47,7 @@
                 </ul>
             </div>
             <div class="as-login-exist-account">
-                <?php esc_html_e('Login to an existing account', 'accountSwitcher'); ?>
+                <?php esc_html_e('Login to an existing account', 'account-switcher'); ?>
             </div>
         </div>
     </div>

@@ -1,11 +1,15 @@
 {
+    "scripts": {
+        "phpcs": "phpcs --standard=phpcs.xml .",
+        "phpcbf": "phpcbf --standard=phpcs.xml .",
+        "install-phpcs": "composer config --global --no-plugins allow-plugins.dealerdirect/phpcodesniffer-composer-installer true && composer global require --dev squizlabs/php_codesniffer=* slevomat/coding-standard"
+    },
     "autoload": {
         "psr-4": {
             "BeycanPress\\AccountSwitcher\\": "app"
         }
     },
     "require": {
-        "beycanpress/csf": "^2.3",
-        "beycanpress/http": "^0.1.4"
+        "beycanpress/csf": "^2.4"
     }
 }

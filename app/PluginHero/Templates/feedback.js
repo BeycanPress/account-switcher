@@ -1,5 +1,7 @@
-
 (($) => {
+    if (!window.bpPhFeedbacks) {
+        window.bpPhFeedbacks = [];
+    }
     $(document).ready(() => {
 
         let feedbackModals = $(".bp-feedback-modal");
@@ -7,6 +9,12 @@
         feedbackModals.each(function() {
             let modal = $(this);
             let slug = modal.data('slug');
+
+            if (window.bpPhFeedbacks.includes(slug)) {
+                return;
+            }
+
+            window.bpPhFeedbacks.push(slug);
             let apiUrl = modal.data('api-url');
             let pluginKey = modal.data('plugin-key');
             let apiData = {
@@ -17,20 +25,18 @@
             }
 
             var deactivationUrl = '';
-            window.onload = function(){
-                $(document).on('click', 'tr[data-plugin="'+slug+'"] .column-primary .deactivate a', function(e){
-                    e.preventDefault()
-                    deactivationUrl =  $(this).attr('href');
-                    $('#'+pluginKey+'-feedback-modal').css('display', 'flex');
-                });
-            }
+            $(document).on('click', 'tr[data-plugin="'+slug+'"] .column-primary .deactivate a', function(e) {
+                e.preventDefault()
+                deactivationUrl =  $(this).attr('href');
+                $('#'+pluginKey+'-feedback-modal').css('display', 'flex');
+            });
 
-            $(document).on('click', '.'+pluginKey+'-feedback-button-cancel', function(e){
+            $(document).on('click', '.'+pluginKey+'-feedback-button-cancel', function(e) {
                 e.preventDefault();
                 $('#'+pluginKey+'-feedback-modal').css('display', 'none');
             });
 
-            let exlcludedForReasonBox = [
+            let excludedForReasonBox = [
                 pluginKey+'_temporary_deactivation',
                 pluginKey+'_premium_version',
             ];
@@ -55,7 +61,6 @@
                             $('#'+pluginKey+'-feedback-modal-footer').hide();
                         },
                         success: function() {
-                            $('#'+pluginKey+'-feedback-modal').css('display', 'none');
                             window.location.href = deactivationUrl;
                         },
                         error: function(error) {
@@ -68,12 +73,12 @@
                 }
             }
             
-            $(document).on('click', '.'+pluginKey+'-feedback-skip', function(e){
+            $(document).on('click', '.'+pluginKey+'-feedback-skip', function(e) {
                 e.preventDefault();
                 deactivateProcess("I rather wouldn't say", 'rather-wouldnt-say');
             });
 
-            $(document).on('click', '.'+pluginKey+'-feedback-button-deactivate', function(e){
+            $(document).on('click', '.'+pluginKey+'-feedback-button-deactivate', function(e) {
                 e.preventDefault();
                 var reason = $('.'+pluginKey+'_deactivation_reason:checked').val();
                 var detail = $('#'+pluginKey+'_deactivation_reason_detail').val();
@@ -83,7 +88,7 @@
                     return false;
                 }
 
-                if (!detail && !exlcludedForReasonBox.includes($('.'+pluginKey+'_deactivation_reason:checked').attr('id'))) {
+                if (!detail && !excludedForReasonBox.includes($('.'+pluginKey+'_deactivation_reason:checked').attr('id'))) {
                     alert('Please provide more information!');
                     return false;
                 }
@@ -97,7 +102,7 @@
             
             $(document).on('change', '.'+pluginKey+'_deactivation_reason', function(e) {
                 e.preventDefault()
-                if (exlcludedForReasonBox.includes($(this).attr('id'))) {
+                if (excludedForReasonBox.includes($(this).attr('id'))) {
                     $('#'+pluginKey+'-feedback-modal-reason-detail').remove();
                     return;
                 }

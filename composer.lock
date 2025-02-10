@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "78f2e50717e530dec36002c66e245ab2",
+    "content-hash": "f0097cce314cfd277734b5262658c9a5",
     "packages": [
         {
             "name": "beycanpress/csf",
-            "version": "2.3.4",
+            "version": "2.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/BeycanPress/csf.git",
-                "reference": "f8db82b6339e69cbb765496d623789e7f472977e"
+                "reference": "221ef88595f8debf4a25856ebe9a513e3b7515a1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/BeycanPress/csf/zipball/f8db82b6339e69cbb765496d623789e7f472977e",
-                "reference": "f8db82b6339e69cbb765496d623789e7f472977e",
+                "url": "https://api.github.com/repos/BeycanPress/csf/zipball/221ef88595f8debf4a25856ebe9a513e3b7515a1",
+                "reference": "221ef88595f8debf4a25856ebe9a513e3b7515a1",
                 "shasum": ""
             },
             "type": "library",
@@ -29,9 +29,9 @@
             "homepage": "https://github.com/BeycanPress/csf",
             "support": {
                 "issues": "https://github.com/BeycanPress/csf/issues",
-                "source": "https://github.com/BeycanPress/csf/tree/2.3.4"
+                "source": "https://github.com/BeycanPress/csf/tree/2.4.0"
             },
-            "time": "2023-12-06T04:35:59+00:00"
+            "time": "2024-10-10T17:56:32+00:00"
         },
         {
             "name": "beycanpress/http",
@@ -72,10 +72,10 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
-    "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "platform": {},
+    "platform-dev": {},
+    "plugin-api-version": "2.6.0"
 }

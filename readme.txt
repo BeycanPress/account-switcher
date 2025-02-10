@@ -1,9 +1,9 @@
-=== Account Switcher (Multiple accounts plugin) ===
+=== Account Switcher ===
 Contributors: BeycanPress
 Tags: multiple accounts, wpml, account switcher
 Requires at least: 5.0
-Tested up to: 6.4.2
-Requires PHP: 7.4
+Tested up to: 6.7
+Requires PHP: 8.1
 Stable Tag: 1.0.0
 Version: 1.0.0
 License: GPLv3
@@ -13,11 +13,11 @@ With Account Switcher, you can add a new and super feature to your sites, especi
 
 == Description ==
 
-**What is Account Switcher?**
+### What is Account Switcher?
 
 With Account Switcher, you can add a new and super feature to your sites, especially by eliminating a big deficiency of your social WordPress sites. Account Switcher offers you the convenience of logging in with more than one account and switching between accounts on a device you see on many popular social media sites. 
 
-**How to use?**
+### How to use?
 
 First of all, you have to add the purchase code that Envato gave you to the license section to activate the plugin.
 
@@ -37,6 +37,11 @@ With the default configuration, this plugin, in itself, does not:
 * track users by stealth;
 * send any data to external servers;
 
+= 3rd Party Libraries & API's =
+* https://beycanpress.com/
+    * Privacy policy: https://beycanpress.com/privacy-policy/
+    * This is our website. We use it to provide support and sell premium plugins.
+    
 = Translations =
 
 You can easily translate with Loco translate.
