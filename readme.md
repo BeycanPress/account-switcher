@@ -8,8 +8,8 @@ With Account Switcher, you can add a new and super feature to your sites, especi
 
 It is very simple to use as you can see in the picture below. You just need to add a menu to the field you want to add with the ”#account-switcher” link. Account Switcher only works after login. In other words, if no login is logged, Account Switcher will be inactive.
 
-<img src="https://i.hizliresim.com/czssrcb.png" alt="Account Switcher for WordPress (Multiple accounts plugin) 1">
+![Screenshot 1](https://i.hizliresim.com/czssrcb.png)
 
 You do not need any additional settings. If you want it to appear in the WooCommerce My Account menu, you can activate it as follows. 
 
-<img src="https://i.hizliresim.com/7c8rtuc.png" alt="Account Switcher for WordPress (Multiple accounts plugin) 2">
+![Screenshot 2](https://i.hizliresim.com/7c8rtuc.png)
