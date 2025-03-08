@@ -74,17 +74,17 @@
             return o;
         };
 
-        AS.getRecirectTo = () => {
+        AS.getRedirectTo = () => {
             let dataRedirect = $(".as-modal").attr("data-redirect");
             let redirectTo = (new URLSearchParams(window.location.search)).get('redirect_to');
-            return dataRedirect == 'same-page' ? window.location.href : redirectTo;
+            return dataRedirect == 'same-page' ? window.location.href : (redirectTo || dataRedirect);
         }
 
         $(document).on('submit', '#as-login-form', function (e) {
             e.preventDefault();
             let data = $(this).serializeObject();
             let submit = $(this).find('input[type="submit"]');
-            data.redirectTo = AS.getRecirectTo();
+            data.redirectTo = AS.getRedirectTo();
             $.ajax({
                 method: 'POST',
                 url: AS.apiUrl + '/login',
@@ -141,7 +141,7 @@
         $(document).on('click', ".as-user-list li:not(.current-user)", function () {
             let userId = $(this).attr("data-user-id");
             let secret = $(this).attr("data-user-secret");
-            let redirectTo = AS.getRecirectTo();
+            let redirectTo = AS.getRedirectTo();
             $.ajax({
                 method: 'POST',
                 url: AS.apiUrl + '/rememberLogin',

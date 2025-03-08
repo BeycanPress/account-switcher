@@ -32,9 +32,11 @@ class Hooks
             add_filter('woocommerce_get_endpoint_url', [$this, 'wooCommerceMyAccountMenuEndpointUrl'], 10, 2);
         }
 
-        if (is_user_logged_in()) {
-            add_action('wp_footer', [$this, 'modal']);
-        }
+        add_action('init', function (): void {
+            if (is_user_logged_in()) {
+                add_action('wp_footer', [$this, 'modal']);
+            }
+        });
     }
 
     /**

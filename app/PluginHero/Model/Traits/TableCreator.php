@@ -49,7 +49,7 @@ trait TableCreator
 
         if (!$this->existTable()) {
             $columnQuery = $this->arrayToSqlQuery($this->columns);
-            update_option($this->tableName . '_version', $this->version);
+            update_option('beycanpress_' . $this->tableName . '_version', $this->version);
             $this->db->get_var("CREATE TABLE IF NOT EXISTS `{$this->tableName}` ($columnQuery) {$this->charset};");
         } else {
             $this->updateTable();
@@ -63,8 +63,8 @@ trait TableCreator
      */
     public function updateTable(): void
     {
-        if (get_option($this->tableName . '_version') != $this->version) {
-            update_option($this->tableName . '_version', $this->version);
+        if (get_option('beycanpress_' . $this->tableName . '_version') != $this->version) {
+            update_option('beycanpress_' . $this->tableName . '_version', $this->version);
 
             $i = 1;
             $keys = array_keys($this->columns);
@@ -78,13 +78,13 @@ trait TableCreator
                 $i++;
             }
 
-            $oldColumns = get_option($this->tableName . '_old_columns', []);
+            $oldColumns = get_option('beycanpress_' . $this->tableName . '_old_columns', []);
             $removedColumns = array_diff_key($oldColumns, $this->columns);
             foreach ($removedColumns as $columnName => $properties) {
                 $this->deleteColumn($columnName);
             }
 
-            update_option($this->tableName . '_old_columns', $this->columns);
+            update_option('beycanpress_' . $this->tableName . '_old_columns', $this->columns);
         }
     }
 

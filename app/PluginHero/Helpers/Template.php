@@ -236,41 +236,4 @@ trait Template
             'dismissible' => $dismissible
         ]));
     }
-
-    /**
-     * @param string $notice notice to be given
-     * @param string $type error, success more
-     * @param bool $dismissible in-dismissible button show and hide
-     * @return void
-     */
-    public static function notice(string $notice, string $type = 'success', bool $dismissible = false): void
-    {
-        $id = md5($notice . $type . $dismissible);
-
-        $dismissed = get_option('bp_dismissed_notices', []);
-
-        if (in_array($id, $dismissed)) {
-            return;
-        }
-
-        self::ksesEcho(self::getTemplate('notice', [
-            'id' => $id,
-            'type' => $type,
-            'notice' => $notice,
-            'dismissible' => $dismissible
-        ]));
-    }
-
-    /**
-     * @param string $notice notice to be given
-     * @param string $type error, success more
-     * @param bool $dismissible in-dismissible button show and hide
-     * @return void
-     */
-    public static function adminNotice(string $notice, string $type = 'success', bool $dismissible = false): void
-    {
-        add_action('admin_notices', function () use ($notice, $type, $dismissible): void {
-            self::notice($notice, $type, $dismissible);
-        });
-    }
 }

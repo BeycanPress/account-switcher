@@ -22,9 +22,7 @@ class Loader extends Plugin
             'pluginVersion' => '1.0.0'
         ]);
 
-        add_action('init', function (): void {
-            new Hooks();
-        });
+        new Hooks();
     }
 
     /**

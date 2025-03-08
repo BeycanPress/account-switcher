@@ -161,6 +161,6 @@ class RestAPI extends PluginHero\BaseAPI
             $redirectTo = 'same-page' != Settings::get('loginRedirect') ? Settings::get('loginRedirect') : $redirectTo;
         }
 
-        return apply_filters("AccountSwitcher/RedirectTo", $redirectTo);
+        return apply_filters("BeycanPress/AccountSwitcher/RedirectTo", $redirectTo);
     }
 }

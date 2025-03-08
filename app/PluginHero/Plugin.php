@@ -103,9 +103,9 @@ abstract class Plugin
     public function bpDismissNotice(): void
     {
         if (isset($_POST['id'])) {
-            $dismissed = get_option('bp_dismissed_notices', []);
+            $dismissed = get_option('beycanpress_dismissed_notices', []);
             $dismissed[] = sanitize_text_field(wp_unslash($_POST['id']));
-            update_option('bp_dismissed_notices', array_unique($dismissed));
+            update_option('beycanpress_dismissed_notices', array_unique($dismissed));
         }
         wp_die();
     }

@@ -74,15 +74,6 @@ abstract class Page
                         [$this, 'page']
                     );
                 }
-                if (isset($properties->hidden)) {
-                    add_action('admin_head', function (): void {
-                        echo '<style>
-                        #adminmenu #toplevel_page_' . esc_html($this->slug) . ' { 
-                            display: none;
-                        }
-                        </style>';
-                    });
-                }
             }
         }, $properties->priority ?? 10);
 

@@ -24,7 +24,7 @@ abstract class BaseAPI
     /**
      * @var int
      */
-    protected int $currentUserId;
+    protected int $currentUserId = 0;
 
     /**
      * @param array<string,array<mixed>> $routeList

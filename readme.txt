@@ -4,8 +4,8 @@ Tags: multiple accounts, wpml, account switcher
 Requires at least: 5.0
 Tested up to: 6.7
 Requires PHP: 8.1
-Stable Tag: 1.0.0
-Version: 1.0.0
+Stable Tag: 1.0.1
+Version: 1.0.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -53,6 +53,9 @@ You can easily translate with Loco translate.
 3. Enjoy.
 
 == Changelog ==
+
+= 1.0.1 =
+* Fixed some bugs.
 
 = 1.0.0 =
 * Plugin released.

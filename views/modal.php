@@ -1,9 +1,10 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 // phpcs:disable PluginCheck.CodeAnalysis.ImageFunctions.NonEnqueuedImage
 use BeycanPress\AccountSwitcher\Settings;
 ?>
 
-<div class="as-modal" data-redirect="<?php echo esc_attr(Settings::get('loginRedirect')); ?>">
+<div class="as-modal" data-redirect="<?php echo esc_url(Settings::get('loginRedirect')); ?>">
     <div class="as-content">
         <div class="as-close">
             <svg aria-label="Close" class="_ab6-" color="#262626" fill="#262626" height="18" role="img" viewBox="0 0 24 24" width="18"><polyline fill="none" points="20.643 3.357 12 12 3.353 20.647" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></polyline><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" x1="20.649" x2="3.354" y1="20.649" y2="3.354"></line></svg>

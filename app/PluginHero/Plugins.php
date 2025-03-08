@@ -60,6 +60,7 @@ class Plugins extends Page
     {
         $res = wp_remote_retrieve_body(wp_remote_get($this->apiUrl . 'get-plugins'));
         $res = json_decode(str_replace(['<p>', '</p>'], '', $res));
+        Helpers::addStyle('plugins.css');
         Helpers::echoTemplate('plugins', [
             'plugins' => $res->data->plugins
         ]);
