@@ -19,8 +19,6 @@ With Account Switcher, you can add a new and super feature to your sites, especi
 
 ### How to use?
 
-First of all, you have to add the purchase code that Envato gave you to the license section to activate the plugin.
-
 It is very simple to use as you can see in the picture below. You just need to add a menu to the field you want to add with the ”#account-switcher” link. Account Switcher only works after login. In other words, if no login is logged, Account Switcher will be inactive.
 
 <img src="https://i.hizliresim.com/czssrcb.png" alt="Account Switcher for WordPress (Multiple accounts plugin) 1">
