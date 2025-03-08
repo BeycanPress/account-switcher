@@ -10,8 +10,8 @@ First of all, you have to add the purchase code that Envato gave you to the lice
 
 It is very simple to use as you can see in the picture below. You just need to add a menu to the field you want to add with the ”#account-switcher” link. Account Switcher only works after login. In other words, if no login is logged, Account Switcher will be inactive.
 
-<img src="https://i.ibb.co/P1Kwz3m/68747470733a2f2f692e68697a6c69726573696d2e636f6d2f3732346e376a362e706e67.png" alt="Account Switcher for WordPress (Multiple accounts plugin) 1" border="0">
+<img src="https://i.hizliresim.com/czssrcb.png" alt="Account Switcher for WordPress (Multiple accounts plugin) 1">
 
 You do not need any additional settings. If you want it to appear in the WooCommerce My Account menu, you can activate it as follows. 
 
-<img src="https://i.ibb.co/dk9vZ26/68747470733a2f2f692e68697a6c69726573696d2e636f6d2f706969793932342e706e67.png" alt="Account Switcher for WordPress (Multiple accounts plugin) 2" border="0">
+<img src="https://i.hizliresim.com/7c8rtuc.png" alt="Account Switcher for WordPress (Multiple accounts plugin) 2">
