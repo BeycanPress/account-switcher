@@ -10,7 +10,7 @@ defined('ABSPATH') || exit;
 
 /**
  * Plugin Name:  Account Switcher
- * Version:      1.0.1
+ * Version:      1.0.2
  * Plugin URI:   https://beycanpress.com/our-plugins/
  * Description:  Thanks to this plugin, more than one account can be registered on a wordpress site and the user can switch between accounts at any time.
  * Author URI:   https://beycanpress.com
@@ -19,9 +19,10 @@ defined('ABSPATH') || exit;
  * Text Domain:  account-switcher
  * License:      GPLv3
  * License URI:  https://www.gnu.org/licenses/gpl-3.0.tr.html
+ * Text Domain:  account-switcher
  * Domain Path:  /languages
  * Requires at least: 5.0
- * Tested up to: 6.7.2
+ * Tested up to: 6.8
  * Requires PHP: 8.1
 */
 
