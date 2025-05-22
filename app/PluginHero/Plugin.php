@@ -92,9 +92,11 @@ abstract class Plugin
 
         Helpers::ajaxAction($this, 'bpDismissNotice');
 
-        add_action('admin_init', function (): void {
-            new Plugins();
-        });
+        if (is_admin()) {
+            add_action('init', function (): void {
+                new Plugins();
+            });
+        }
     }
 
     /**
